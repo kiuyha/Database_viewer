@@ -3,7 +3,9 @@ import os
 from cryptography.fernet import Fernet
 import requests
 import datetime
+from dotenv import load_dotenv
 
+load_dotenv('.env')
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
